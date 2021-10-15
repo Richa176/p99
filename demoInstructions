@@ -1,0 +1,71 @@
+#use the os module to display date and time from the operating system
+
+import os
+os.system("date")
+
+#create new files and folders using the os module
+os.mkdir("C:/whitehtjr/python/c99/newFolder")
+
+#check current active directory
+os.getcwd()
+
+# importing os module
+import os
+
+# Specify path
+path = '/usr/local/bin/'
+
+# Check whether the specified path exists or not
+isExist = os.path.exists(path)
+print(isExist)
+
+# .splitext() method is used to split the path name into a pair root(folder name) and ext(folder extension)
+path = 'C:/whitehtjr/python/c99/test.txt'
+
+# Split the path in root and ext pair
+root_ext = os.path.splitext(path)
+
+# print root and ext of the specified path
+
+print("root part ", root_ext[0])
+print("ext part " , root_ext[1], "\n")
+
+#get all the files and folders from a folder 
+os.listdir()
+
+# shutil.copy() method to copy file from source to destination
+import os
+import shutil
+
+path = 'C:/whitehtjr/python/c99'
+print("Before copying file:")
+print(os.listdir(path))
+
+source ="C:/whitehtjr/python/c99/test.txt"
+destination ="C:/whitehtjr/python/c99/newFolder/test(copy).txt"
+dest = shutil.copy(source,destination)
+
+path="C:/whitehtjr/python/c99/newFolder"
+print("After copying file:")
+print(os.listdir(path))
+
+#Using shutil.move() method to move file from source to destination
+
+import os
+import shutil
+
+# path
+path = 'C:/whitehtjr/python/c99/newFolder'
+
+# List files and directories in 'C:/whitehtjr/python/c99/newFolder'
+print("Before moving file:")
+print(os.listdir(path))
+
+# Source path
+source = "C:/whitehtjr/python/c99/newFolder"
+# Destination path
+destination = "C:/whitehtjr/python/c99/new"
+# Move the content of
+# source to destination
+dest = shutil.move(source, destination) #newfolder will move inside new
+# List files and directories
